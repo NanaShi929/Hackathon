@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Login Page</title>
+<link rel="stylesheet" href="login.css">
+</head>
+<body>
+
+
+    <h2>Login</h2>
+    <label for="username">Username:</label>
+    <input type="text" id="username" required><br><br>
+    <label for="password">Password:</label>
+    <input type="password" id="password" required><br><br>
+    <button  id="submitBtn" ><a href="index.html">Submit</a></button>
+    <button id="closeBtn">Close</button>
+  
+<script>
+  const loginBtn = document.getElementById('loginBtn');
+  
+  const closeBtn = document.getElementById('closeBtn');
+
+  loginBtn.addEventListener('click', () => {
+    overlay.style.display = 'flex';
+  });
+  submitBtn.addEventListener('click', () => {
+    const usernameInput = document.getElementById("username");
+    const username = usernameInput.value;
+    alert("Welcome, " + username + "!");
+    overlay.style.display = 'none'; 
+  });
+  closeBtn.addEventListener('click', () => {
+    overlay.style.display = 'none';
+  });
+</script>
+
+</body>
+</html>
